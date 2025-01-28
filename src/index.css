@@ -2,24 +2,4 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    @apply bg-gray-500 text-gray-800 font-sans; 
-    body {
-    @apply bg-gray-500 text-gray-800 font-sans; 
-    margin: 0;
-    padding: 0;
-}
 
-h1, h2, h3, h4, h5, h6 {
-    @apply font-bold text-gray-900;
-}
-
-a {
-    @apply text-blue-500 hover:text-blue-700;
-    text-decoration: none;
-}
-
-p {
-    @apply text-gray-700 leading-relaxed;
-}
-}

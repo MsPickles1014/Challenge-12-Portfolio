@@ -87,17 +87,20 @@ const Contact = () => {
     ];
 
     return (
-        <section className="p-8 bg-gray-70 dark:bg-gray-900">
-            <h1 className="text-3xl font-bold text-blue-700 dark:text-blue-300 mb-6 text-center">Contact Me</h1>
+        <section className="p-8 bg-gray-70 dark:bg-gray-900;" 
+         >
+            <h1 className="text-3xl font-bold text-blue-700 dark:text-blue-300 mb-6 text-center;"
+              >Contact Me</h1>
             <form
                 onSubmit={handleSubmit}
-                className="max-w-md mx-auto bg-gray-500 dark:bg-gray-800 shadow-md p-6 rounded"
-            >
+                className="max-w-md mx-auto bg-gray-500 dark:bg-gray-800 shadow-md p-6 rounded;"
+               >
                 {fields.map(({ id, label, type, value, error }) => (
                     <div key={id} className="mb-4">
                         <label
                             htmlFor={id}
-                            className="block text-sm font-medium text-gray-700 dark:text-gray-300"
+                            className="block text-sm font-medium text-gray-700 dark:text-gray-300;"
+                            
                         >
                             {label}
                         </label>
@@ -127,7 +130,8 @@ const Contact = () => {
                 ))}
                 <button
                     type="submit"
-                    className="w-full bg-blue-500 dark:bg-blue-700 text-white py-2 px-4 rounded hover:bg-gray-700 dark:hover:bg-gray-600"
+                    className="w-full bg-blue-500 dark:bg-blue-700 text-white py-2 px-4 rounded hover:bg-gray-700 dark:hover:bg-gray-600;"
+                    
                 >
                     Submit
                 </button>

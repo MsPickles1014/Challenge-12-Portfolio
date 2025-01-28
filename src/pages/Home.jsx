@@ -3,20 +3,35 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
     return (
-        
-        <div>
+        <main>
+            <div
+        >
+            {/* Hero Section */}
             <HeroSection />
-                <section className="mt-8 text-center py-8 bg-transparent dark:bg-transparent">
-    <h2 className="text-2xl text-blue-900 dark:text-blue-400 font-bold mb-4">Let's Collaborate!</h2>
-    <p className="text-lg mb-6 text-gray-800 dark:text-gray-100">Have a project in mind or just want to connect? Feel free to reach out!</p>
-    <Link
-                    to="/contact"
-                    className="bg-blue-500 hover:bg-blue-700 hover:text-gray-300 text-white py-2 px-4 rounded text-lg"
+
+            {/* Collaboration Section */}
+            <section className="mt-12 py-16 bg-red-500 dark:bg-gray-900 text-center"
                 >
+                <h3>
+                    <p>
+                       You visualize it, I'll build it
+                    <p></p>
+                    </p>
+                </h3>
+                <p>
+                    Have a project in mind or just want to connect? Feel free to reach out!
+                </p>
+
+                <Link 
+                to="/contact"
+                >
+
                     Contact Me
                 </Link>
-</section>
+            </section>
         </div>
+            
+            </main>
     );
 };
 

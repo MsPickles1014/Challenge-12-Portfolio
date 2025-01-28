@@ -1,16 +1,9 @@
+
+/** @type {import('tailwindcss').Config} */
 export default {
-    content: [
-      "./index.html",
-      "./src/**/*.{js,ts,jsx,tsx}",
-    ],
-    darkMode: "class",
-    theme: {
-      extend: { backgroundImage: {
-        'hero-bg': "url('./assets/Backgroundimg.webp')",
-        'portfolio-bg': "url('./assets/Backgroundimg2.webp')"
-    },
-    
+  content: ["./src/**/*.{html,js,jsx,ts,tsx}"], // Include all relevant file extensions
+  theme: {
+    extend: {},
   },
-    },
-    plugins: [],
-  };
+  plugins: [],
+};

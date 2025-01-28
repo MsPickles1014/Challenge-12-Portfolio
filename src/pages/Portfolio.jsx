@@ -11,7 +11,7 @@ const projects = [
         description: "The Alphabet Learning App is an interactive, educational tool designed to help users learn the alphabet. The app allows users to input letters, dynamically generates flashcards with images and text, and saves progress using local storage. It also includes background music, a modal interface, and a Play-Again feature for restarting the learning session.",
         image: image1, 
         github: "https://mspickles1014.github.io/CoolCademy/",
-    },
+    },    
     {
         id: 2,
         title: "Employee Tracker",
@@ -43,32 +43,46 @@ const projects = [
 ];
 const Portfolio = () => {
     return (
-        <section 
-        id="portfolio" 
-        className="p-8 bg-portfolio-bg bg-cover bg-center text-gray-900">
+        <section
+            id="portfolio"
+            className="p-8 bg-portfolio-bg bg-cover bg-center text-gray-900"
+        >
+            <h1 className="text-3xl font-bold mb-6 text-center">
+                Welcome to My Project Page
+            </h1>
+            <h2 className="text-2xl font-bold mb-4 text-center">My Projects</h2>
 
-            <h1 className="text-3xl font-bold mb-6 text-center">Welcome to My Project Page</h1>
-            <h2 className="text-2xl font-bold mb-4">My Projects</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Grid Container */}
+            <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-8">
                 {projects.map((project) => (
-                    <div key={project.id} className="bg-white shadow-lg p-4 rounded">
-                        <img 
-                            src={project.image} 
-                            alt={project.title} 
-                            className={`w-full h-48 object-cover rounded mb-4 ${
-                                project.id === 2 ? 'object-[50%_20%]' : 'object-center'
-                            }`}
+                    <div
+                        key={project.id}
+                        className="bg-white shadow-lg rounded-lg overflow-hidden h-full flex flex-col"
+                    >
+                        {/* Project Image */}
+                        <img
+                            src={project.image}
+                            alt={project.title}
+                            style={{ width: '15rem', height: '10rem' }}
+                            className="w-full h-48 object-cover"
                         />
-                        <h3 className="text-lg font-semibold">{project.title}</h3>
-                        <p>{project.description}</p>
-                        <a 
-                            href={project.github} 
-                            target="_blank" 
-                            rel="noopener noreferrer" 
-                            className="mt-4 inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                        >
-                            View on GitHub
-                        </a>
+                        {/* Project Details */}
+                        <div className="p-4 flex flex-col flex-grow">
+                            <h3 className="text-lg font-semibold mb-2">
+                                {project.title}
+                            </h3>
+                            <p className="text-sm text-gray-700 flex-grow">
+                                {project.description}
+                            </p>
+                            <a
+                                href={project.github}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-center"
+                            >
+                                View on GitHub
+                            </a>
+                        </div>
                     </div>
                 ))}
             </div>

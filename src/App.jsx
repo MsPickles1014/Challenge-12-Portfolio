@@ -1,35 +1,28 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { Outlet } from "react-router-dom";
+import GlobalBackground from "./assets/flower2.jpg";
 
 function App() {
-    const [theme, setTheme] = useState(() => {
-        return localStorage.getItem("theme") || "light";
-    });
-
-    useEffect(() => {
-        if (theme === "dark") {
-            document.documentElement.classList.add("dark");
-        } else {
-            document.documentElement.classList.remove("dark");
-        }
-        localStorage.setItem("theme", theme);
-    }, [theme]);
-
-    const toggleTheme = () => {
-        setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
-    };
-
     return (
-        <div className={`flex flex-col h-screen ${theme === "dark" ? "bg-gray-900 text-white" : "bg-gray-50 text-black"}`}>
-            <Navbar toggleTheme={toggleTheme} theme={theme} />
-            <main className="flex-grow">
+        <main className >
+            <div 
+            style={{
+                backgroundImage: `url(${GlobalBackground})`,
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat"
+            }}
+        >
+            <Navbar />
+            <main className="flex-grow text-6xl">
                 <Outlet />
             </main>
             <Footer />
         </div>
+            </main>
     );
 }
 
 export default App;
+
